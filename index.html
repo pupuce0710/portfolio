@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Faustine RUBIO</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <!-- SVG sprite: icônes professionnelles réutilisables -->
+    <svg aria-hidden="true" style="display: none">
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <polyline
+          points="9 6 3 12 9 18"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+        <polyline
+          points="15 6 21 12 15 18"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+      </symbol>
+      <symbol id="icon-db" viewBox="0 0 24 24">
+        <ellipse
+          cx="12"
+          cy="6"
+          rx="7"
+          ry="3"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+        />
+        <path
+          d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+        />
+      </symbol>
+      <symbol id="icon-terminal" viewBox="0 0 24 24">
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+        />
+        <polyline
+          points="7 9 11 13 7 17"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        />
+        <line
+          x1="13"
+          y1="16"
+          x2="17"
+          y2="16"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="icon-branch" viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="2" fill="currentColor" />
+        <circle cx="18" cy="6" r="2" fill="currentColor" />
+        <circle cx="12" cy="18" r="2" fill="currentColor" />
+        <path
+          d="M8 6c2 0 4 2 4 6s2 6 4 6"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="2" fill="currentColor" />
+        <circle cx="17" cy="8" r="2" fill="currentColor" />
+        <path
+          d="M4 20c1.5-3 7-3 9-3s7 0 9 3"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+        />
+        <path
+          d="M3 7l9 6 9-6"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+          stroke="currentColor"
+          stroke-width="1.4"
+          fill="none"
+        />
+        <path d="M2 12h20" stroke="currentColor" stroke-width="1.2" />
+        <path
+          d="M12 2c2.5 5 2.5 15 0 20"
+          stroke="currentColor"
+          stroke-width="1.2"
+          fill="none"
+        />
+        <path
+          d="M5 5c5 2 14 2 19 0"
+          stroke="currentColor"
+          stroke-width="1.0"
+          opacity="0.6"
+          fill="none"
+        />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <rect x="4" y="13" width="3" height="7" fill="currentColor" />
+        <rect x="10.5" y="9" width="3" height="11" fill="currentColor" />
+        <rect x="17" y="5" width="3" height="15" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-light" viewBox="0 0 24 24">
+        <path
+          d="M12 3a5 5 0 0 0-3 9c0 2 1 3 1 4h4c0-1 1-2 1-4a5 5 0 0 0-3-9z"
+          stroke="currentColor"
+          stroke-width="1.2"
+          fill="none"
+        />
+        <path
+          d="M9 21h6"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+        />
+      </symbol>
+    </svg>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">Portfolio</span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a href="#journey" class="nav-link">Parcours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-wrapper">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-firstname">Faustine RUBIO</h1>
+            <p class="hero-tagline">Étudiante ingénieure en informatique · Analyse de données</p>
+            <p class="hero-description">
+              En première année de cycle préparatoire intégré à l'ESAIP (Aix-en-Provence), je me spécialise en informatique et en analyse de données. Rigoureuse, curieuse et autonome, je m'intéresse particulièrement à l'exploitation des données et au développement d'outils numériques performants.
+            </p>
+            <div class="hero-buttons">
+              <a href="https://pdflink.to/65155430/" target="_blank" rel="noreferrer" class="btn btn-primary">Voir mon CV</a>
+              <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-photo-placeholder">
+              <img src="images/faustine-photo-profil.png" alt="Photo de profil de Faustine RUBIO" id="hero-photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">À Propos</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Je suis étudiante en informatique en première année de classe
+              préparatoire intégrée à l’ESAIP (Aix-en-Provence).
+            </p>
+            <p>
+              J’ai obtenu un baccalauréat général avec mention Très Bien, avec
+              les spécialités Mathématiques et Physique-Chimie, ainsi que
+              l’option Maths expertes en terminale.
+            </p>
+            <p>J’ai effectué mon lycée au lycée Félix Esclangon à Manosque.</p>
+            <p>
+              Mon parcours m’a permis de développer une solide base scientifique
+              ainsi qu’un fort intérêt pour l’informatique et l’analyse de
+              données.
+            </p>
+            <p>
+              Je suis une personne rigoureuse, autonome, curieuse et dotée d’un
+              bon esprit d’analyse. J’aime comprendre les systèmes et produire
+              un travail structuré et efficace.
+            </p>
+          </div>
+          <div class="about-keywords">
+            <div class="keywords-list">
+              <span class="keyword-tag">Rigoureuse</span>
+              <span class="keyword-tag">Autonome</span>
+              <span class="keyword-tag">Curieuse</span>
+              <span class="keyword-tag">Organisation</span>
+              <span class="keyword-tag">Travail en équipe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-grid">
+          <!-- Développement -->
+          <div class="skill-category">
+            <h3 class="skill-title">
+              <span class="category-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 6 3 12 9 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 6 21 12 15 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></span
+              >Développement
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-code"></use></svg
+                  ><span>Python</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-browser"></use></svg
+                  ><span>HTML - CSS</span><span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-db"></use></svg
+                  ><span>SQL</span><span class="skill-percent">55%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 55%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-chart"></use></svg
+                  ><span>DAX</span><span class="skill-percent">50%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 50%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-terminal"></use></svg
+                  ><span>Linux</span><span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data/BI -->
+          <div class="skill-category">
+            <h3 class="skill-title">
+              <span class="category-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 18V8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10 18V12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16 18V6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M22 18V14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M2 20h20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg></span
+              >Data/BI
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-spreadsheet"></use></svg
+                  ><span>Tableaux croisés dynamiques</span
+                  ><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-chart"></use></svg
+                  ><span>Tableaux de bord — Dashboards</span
+                  ><span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-dashboard"></use></svg
+                  ><span>Graphiques — Indicateurs — KPI</span
+                  ><span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bureautique -->
+          <div class="skill-category">
+            <h3 class="skill-title">
+              <span class="category-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 3h9l6 6v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 3v6h6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 12h8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 16h8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 20h5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  /></svg></span
+              >Bureautique
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-palette"></use></svg
+                  ><span>Canva</span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-code"></use></svg
+                  ><span>Microsoft Word</span
+                  ><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-spreadsheet"></use></svg
+                  ><span>Microsoft Excel</span
+                  ><span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-browser"></use></svg
+                  ><span>Microsoft PowerPoint</span
+                  ><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-top">
+                  <svg class="icon"><use href="#icon-dashboard"></use></svg
+                  ><span>Power BI</span><span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours Timeline (Formations & Expériences) -->
+    <section id="journey" class="journey">
+      <div class="container">
+        <h2 class="section-title">Parcours</h2>
+
+        <!-- Formations -->
+        <h3 class="subsection-title">Formations</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot logo" aria-label="Formation">
+              <span
+                class="timeline-emoji"
+                role="img"
+                aria-label="Chapeau de diplômé"
+                >🎓</span
+              >
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                École d’ingénieure - Cycle préparatoire
+              </h3>
+              <p class="timeline-date">2025 - 2027</p>
+              <p class="timeline-meta">
+                ESAIP - Aix-en-Provence (13) — Spécialité Informatique et
+                Réseaux
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot logo" aria-label="Formation">
+              <span
+                class="timeline-emoji"
+                role="img"
+                aria-label="Chapeau de diplômé"
+                >🎓</span
+              >
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Baccalauréat - Mention Très Bien</h3>
+              <p class="timeline-date">Juillet 2025</p>
+              <p class="timeline-meta">
+                Lycée Félix Esclangon - Manosque (04) — Spécialités
+                Mathématiques et NSI, Option Maths Expertes
+              </p>
+              <a href="https://www.dropbox.com/scl/fi/uxgw15viwhvs6sqapeaxt/Releve_de_Notes_234880752800002.pdf?rlkey=o7oruzepbp3fm1m4tpwnk5ci6&st=iywlw5d7&dl=0" target="_blank" rel="noreferrer" class="file-link file-link--pdf">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Relevé de notes
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expériences Professionnelles -->
+        <h3 class="subsection-title">Expériences Professionnelles</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot logo" aria-label="Confiserie">
+              <span class="timeline-emoji" role="img" aria-label="Sucette"
+                >🍭</span
+              >
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Stage — Confiserie du Roy René (1 semaine)
+              </h3>
+              <p class="timeline-date">Stage d’observation</p>
+              <p class="timeline-meta">
+                Stage d’observation en entreprise industrielle. Découverte du
+                fonctionnement d’une industrie et des différents métiers.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot logo" aria-label="Éducation canine">
+              <span
+                class="timeline-emoji"
+                role="img"
+                aria-label="Pattes de chien"
+                >🐾</span
+              >
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Stage — Éducatrice canine (1 semaine)
+              </h3>
+              <p class="timeline-date">Stage d’observation</p>
+              <p class="timeline-meta">
+                Stage d’observation dans un environnement animalier. Découverte
+                du métier d’éducatrice canine et du travail avec les chiens.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot logo" aria-label="Concept ERP">
+              <span
+                class="timeline-emoji"
+                role="img"
+                aria-label="Ordinateur portable"
+                >💻</span
+              >
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Stage — Concept ERP (1 mois)</h3>
+              <p class="timeline-date">Stage orienté analyse de données</p>
+              <p class="timeline-meta">
+                Création de tableaux de bord Power BI à partir de bases de
+                données clients et stocks. Découverte de la business
+                intelligence et de l’exploitation des données en entreprise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Démineur — Python / Tkinter</h3>
+            </div>
+            <p class="project-description">
+              Projet de développement d’un jeu de démineur en Python réalisé au
+              lycée dans le cadre de la spécialité NSI. Objectif : développer la
+              logique algorithmique et créer une interface graphique avec
+              Tkinter.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Tkinter</span>
+              <span class="tech-badge">Algorithmique</span>
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Analyse de données — Excel</h3>
+            </div>
+            <p class="project-description">
+              Analyse d'un jeu de données sous Excel : conception de tableaux croisés dynamiques, interprétation des résultats, rédaction d'un rapport structuré et présentation orale des conclusions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Excel</span>
+              <span class="tech-badge">Tableaux croisés dynamiques</span>
+              <span class="tech-badge">Analyse</span>
+            </div>
+            <div class="project-files">
+              <a href="https://www.dropbox.com/scl/fi/zqe35ocwapcamr796508a/Tableur-Etude-de-Cas-GROUPE-5.xlsx?rlkey=1m6s1bcaab5fxvjz6zsgzs3ao&st=zf02k13x&dl=0" target="_blank" rel="noreferrer" class="file-link file-link--excel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Tableur Excel
+              </a>
+              <a href="https://www.dropbox.com/scl/fi/5e1nv3u2t4357funvhpha/Rapport-Etude-de-Cas-GROUPE-5.docx?rlkey=oyim2k440ccyxf1jv4d8zjaog&st=40we4o8j&dl=0" target="_blank" rel="noreferrer" class="file-link file-link--word">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Rapport Word
+              </a>
+              <a href="https://www.dropbox.com/scl/fi/awft987ikli0qqmhwxl6n/Pr-sentation-Etude-de-Cas-GROUPE-5.pptx?rlkey=zo22jql27xyukmpmtdgvlii20&st=5g471uw9&dl=0" target="_blank" rel="noreferrer" class="file-link file-link--ppt">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Présentation
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Site web e-commerce — HTML/CSS</h3>
+            </div>
+            <p class="project-description">
+              Création d’un site web marchand en 3h30 sur le thème de la vente
+              d’ordinateurs. Objectif : concevoir un site structuré, fonctionnel
+              et responsive en temps limité.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Responsive</span>
+            </div>
+            <div class="project-files">
+              <a href="https://www.dropbox.com/scl/fi/epbdx771diu811oiekhi5/ESAIP-WEB-badbook.zip?rlkey=31x99aahz1j52l6ga9d2ab82v&st=oktsctoq&dl=0" target="_blank" rel="noreferrer" class="file-link file-link--zip">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+                Télécharger le projet (.zip)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Me Contacter</h2>
+        <div class="contact-grid">
+          <div class="contact-icons">
+            <a
+              href="mailto:frubio.ing2030@esaip.org"
+              class="contact-icon-link"
+              title="Email"
+              >✉️</a
+            >
+            <a
+              href="https://www.linkedin.com/in/faustine-rubio"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-icon-link"
+              title="LinkedIn"
+            >
+              <svg
+                class="contact-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a href="tel:0767588995" class="contact-icon-link" title="Téléphone"
+              >📞</a
+            >
+          </div>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name" class="required">Votre Nom</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jean Dupont"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" class="required">Votre Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jean@exemple.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message" class="required">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Votre message..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner container">
+
+        <!-- Colonne identité -->
+        <div class="footer-brand">
+          <span class="footer-name">Faustine Rubio</span>
+          <p class="footer-tagline">Étudiante ingénieure en informatique<br>Spécialisation analyse de données</p>
+          <p class="footer-school">ESAIP · Aix-en-Provence</p>
+        </div>
+
+        <!-- Colonne coordonnées -->
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <a href="mailto:frubio.ing2030@esaip.org">frubio.ing2030@esaip.org</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.61 19a19.45 19.45 0 0 1-6-6A19.79 19.79 0 0 1 3 4.18 2 2 0 0 1 4.97 2H8a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+33767588995">+33 7 67 58 89 95</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Aix-en-Provence, France</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonne liens -->
+        <div class="footer-links">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#journey">Parcours</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne réseaux -->
+        <div class="footer-social">
+          <h4 class="footer-heading">Réseaux</h4>
+          <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/faustine-rubio" target="_blank" rel="noreferrer" class="footer-social-btn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:frubio.ing2030@esaip.org" class="footer-social-btn" title="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              Email
+            </a>
+          </div>
+          <p class="footer-availability">
+            <span class="availability-dot"></span>
+            Disponible pour un stage
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Barre basse -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Faustine Rubio · Tous droits réservés</p>
+          <p class="footer-made">Faits en HTML / CSS / JS</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
