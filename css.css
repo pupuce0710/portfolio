@@ -1199,6 +1199,43 @@ section:nth-child(even) {
         grid-template-columns: repeat(3, 1fr);
     }
 
+/* Encadré blanc pour la section Langues */
+.languages-card {
+    background: var(--bg-white);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    margin: 1rem auto;
+    max-width: 880px;
+}
+.languages-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+/* Petite marge pour l'emoji du titre Langues */
+.skill-emoji {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    /* même style que .category-icon */
+    background: rgba(0, 102, 255, 0.12);
+    border-radius: 12px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-right: 0.6rem;
+    flex-shrink: 0;
+}
+
+/* Sur hover du conteneur Langues : icône en blanc avec dégradé */
+.languages-card:hover .skill-emoji {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
     .projects-grid {
         grid-template-columns: 1fr;
     }

@@ -70,27 +70,49 @@ function showToast(message) {
 }
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-        // Validation avant envoi
+        // Validation
         if (!name || !email || !message) {
-            e.preventDefault();
             alert('Veuillez remplir tous les champs.');
             return;
         }
-
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            e.preventDefault();
             alert('Veuillez entrer une adresse email valide.');
             return;
         }
 
-        // Validation OK — FormSubmit prend le relais, on affiche juste le toast
-        showToast('Message envoyé ! Merci pour votre prise de contact.');
+        // Envoi via Web3Forms
+        submitBtn.textContent = 'Envoi en cours...';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                showToast('Message envoyé ! Merci pour votre prise de contact.');
+                contactForm.reset();
+            } else {
+                showToast('Une erreur est survenue. Veuillez réessayer.');
+            }
+        } catch (err) {
+            showToast('Erreur réseau. Vérifiez votre connexion et réessayez.');
+        } finally {
+            submitBtn.textContent = 'Envoyer';
+            submitBtn.disabled = false;
+        }
     });
 }
 
