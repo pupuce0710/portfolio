@@ -1925,3 +1925,20 @@ section:nth-child(even) {
         box-sizing: border-box;
     }
 }
+
+/* ==================== FIX FINAL SKILL-CARDS MOBILE ==================== */
+@media (max-width: 768px) {
+    .skill-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .skill-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Titre Compétences en violet */
+.skills .section-title {
+    color: #6b5eff;
+}
