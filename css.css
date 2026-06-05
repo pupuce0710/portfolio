@@ -1897,10 +1897,7 @@ section:nth-child(even) {
     }
 }
 
-/* Titre Compétences en rouge */
-.skills .section-title {
-    color: #e63946;
-}
+
 
 /* ==================== FIX GRILLE COMPÉTENCES MOBILE ==================== */
 @media (max-width: 768px) {
@@ -1938,7 +1935,7 @@ section:nth-child(even) {
     }
 }
 
-/* Titre Compétences en violet */
+/* Titre Compétences en noir */
 .skills .section-title {
-    color: #6b5eff;
+    color: var(--text-dark);
 }
